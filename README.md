@@ -20,7 +20,7 @@ FastAPI services behind them, containerised and deployed.
 | Project | What it does | Stack |
 |---|---|---|
 | **[VaidyaAI](https://github.com/dhruvWorkss/VaidyaAI)** — [live](https://vaidya-ai-lovat.vercel.app) | Multilingual medical triage assistant. Patients describe symptoms by voice in English, Hindi or Kannada; the agent assesses urgency, recommends a specialist, and explains uploaded reports in plain language. | LangChain · Groq · FAISS · Whisper · FastAPI · PostgreSQL · React |
-| **[youtube-rag](https://github.com/dhruvWorkss/youtube-rag)** | Semantic search across video transcripts with timestamped answers, so a question returns the moment it was answered. | FAISS · Sentence-Transformers · Groq · Streamlit |
+| **[TubeIQ](https://github.com/dhruvWorkss/TubeIQ)** | Semantic search across video transcripts with timestamped answers, so a question returns the moment it was answered. | FAISS · Sentence-Transformers · Groq · Streamlit |
 | **[PlayXI](https://github.com/dhruvWorkss/PlayXI)** | Fantasy cricket optimiser over 278K+ ball-by-ball IPL records (2008–2026) — head-to-head form, fantasy-point projection, and LLM reasoning to pick the XI. | Python · Streamlit · Llama 3 · pandas |
 | **[upwork-api-bot](https://github.com/dhruvWorkss/upwork-api-bot)** | Developer support bot over API documentation. Hybrid BM25 + semantic retrieval with a confidence threshold that declines to answer rather than guess. | Sentence-Transformers · BM25 · Llama 3.1 · Streamlit |
 | **[finance-system](https://github.com/dhruvWorkss/finance-system)** | Finance tracking backend — CRUD over records, analytics summaries, JWT auth with role-based access, pytest suite. | FastAPI · SQLAlchemy · JWT · pytest |
