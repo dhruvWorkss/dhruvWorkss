@@ -1,53 +1,86 @@
-# Dhruv Pachori
+# Hey, I'm Dhruv 👋
 
-**AI/ML engineer — RAG systems, LLM agents, and the backends that serve them.**
+AI/ML engineer working on RAG systems that survive contact with real users — grounded answers, honest confidence, and the FastAPI services behind them. B.E. in Artificial Intelligence & Data Science, 2026. Based in Bengaluru.
 
-B.E. Artificial Intelligence & Data Science, 2026 · Bengaluru, India
-Open to AI/ML engineering roles.
-
----
-
-### What I work on
-
-Retrieval-augmented generation that holds up outside a demo — hybrid retrieval,
-grounded answers, and hallucination guards. Agentic workflows with LangGraph.
-FastAPI services behind them, containerised and deployed.
+**Open to AI/ML engineering roles.**
 
 ---
 
-### Selected projects
+## 🏆 Highlights
 
-| Project | What it does | Stack |
-|---|---|---|
-| **[VaidyaAI](https://github.com/dhruvWorkss/VaidyaAI)** — [live](https://vaidya-ai-lovat.vercel.app) | Multilingual medical triage assistant. Patients describe symptoms by voice in English, Hindi or Kannada; the agent assesses urgency, recommends a specialist, and explains uploaded reports in plain language. | LangChain · Groq · FAISS · Whisper · FastAPI · PostgreSQL · React |
-| **[TubeIQ](https://github.com/dhruvWorkss/TubeIQ)** | Semantic search across video transcripts with timestamped answers, so a question returns the moment it was answered. | FAISS · Sentence-Transformers · Groq · Streamlit |
-| **[PlayXI](https://github.com/dhruvWorkss/PlayXI)** | Fantasy cricket optimiser over 278K+ ball-by-ball IPL records (2008–2026) — head-to-head form, fantasy-point projection, and LLM reasoning to pick the XI. | Python · Streamlit · Llama 3 · pandas |
-| **[upwork-api-bot](https://github.com/dhruvWorkss/upwork-api-bot)** | Developer support bot over API documentation. Hybrid BM25 + semantic retrieval with a confidence threshold that declines to answer rather than guess. | Sentence-Transformers · BM25 · Llama 3.1 · Streamlit |
-| **[finance-system](https://github.com/dhruvWorkss/finance-system)** | Finance tracking backend — CRUD over records, analytics summaries, JWT auth with role-based access, pytest suite. | FastAPI · SQLAlchemy · JWT · pytest |
+- 🧠 Analysed **10,000+ LLM conversations** at FRND; findings drove retraining that cut response error rates by **15%**
+- ⚙️ Python automation pipelines that reduced manual review effort by **70%**
+- 🔬 Structured evaluation across **5,000+ test cases** on production LLM output
+- 🏥 Shipped a **multilingual medical triage assistant** — English, Hindi and Kannada, voice in and voice out
+- 🏏 ML pipeline over **278,205 ball-by-ball IPL deliveries** (2008–2025)
 
 ---
 
-### Experience
+## 🛠 Tech Stack
 
-**AI Content Analyst Intern** · FRND, Bengaluru · Jan–Mar 2026
+**Languages:**
+Python · SQL
 
-- Analysed **10,000+ LLM-generated conversations** to identify failure patterns and data
-  quality issues; the resulting insights informed model retraining and cut response
-  error rates by **15%**.
-- Built Python automation pipelines for large-scale dataset generation and
-  preprocessing, reducing manual effort by **70%**.
-- Designed and ran structured evaluation pipelines across **5,000+ test cases**,
-  improving consistency of production LLM outputs.
+**Generative AI & NLP:**
+RAG · LangChain · LangGraph · AI Agents · Semantic Search · Embeddings · Sentence Transformers · Prompt Engineering · LLM Evaluation
+
+**ML & Data:**
+Scikit-learn · XGBoost · Random Forest · Pandas · NumPy · Feature Engineering · TensorFlow · Keras
+
+**Backend & Data Stores:**
+FastAPI · PostgreSQL · SQLAlchemy · FAISS · ChromaDB · REST APIs
+
+**LLMs:**
+Llama 3 · Groq · Claude · GPT-4 · Gemini
+
+**Tools:**
+Docker · Git · Streamlit · HuggingFace Transformers
 
 ---
 
-### Tools
+## 📌 Projects
 
-`Python` `LangChain` `LangGraph` `FastAPI` `FAISS` `ChromaDB` `PostgreSQL`
-`Docker` `Streamlit` `scikit-learn` `XGBoost` `React`
+| Project | Description | Stack & Links |
+|---------|-------------|---------------|
+| **VaidyaAI** | Multilingual medical triage assistant. Patients describe symptoms by voice in English, Hindi or Kannada; the agent assesses urgency, recommends a specialist, and explains uploaded blood reports in plain language. Grounded on WHO symptom guides and ICD-11 codes | LangChain · Groq Llama 3.3 · FAISS · Whisper · FastAPI · PostgreSQL · Docker<br>🌐 [Live](https://vaidya-ai-lovat.vercel.app) · 💻 [Code](https://github.com/dhruvWorkss/VaidyaAI) |
+| **TubeIQ** | Semantic search across multiple video transcripts at once — ask a question, get the timestamped moment it was answered, not the whole video | FAISS · Sentence Transformers · LangChain · Groq<br>💻 [Code](https://github.com/dhruvWorkss/TubeIQ) |
+| **PlayXI** | Fantasy cricket optimiser over **278K+ ball-by-ball IPL records**. Head-to-head form, fantasy-point projection, XGBoost models, and PuLP linear programming for constrained XI selection | Python · XGBoost · Scikit-learn · PuLP · Streamlit<br>💻 [Code](https://github.com/dhruvWorkss/PlayXI) |
+| **API Support Bot** | Developer support over API documentation. Hybrid BM25 + semantic retrieval, per-chunk score debugging, and a confidence floor that declines to answer rather than guess | Sentence Transformers · BM25 · Llama 3.1 · Streamlit<br>💻 [Code](https://github.com/dhruvWorkss/upwork-api-bot) |
+| **finance-system** | Finance tracking backend — CRUD over records, analytics summaries, JWT auth with role-based access, and a pytest suite | FastAPI · SQLAlchemy · JWT · pytest<br>💻 [Code](https://github.com/dhruvWorkss/finance-system) |
 
 ---
 
-### Contact
+## ⚡ Deep Dive: teaching a RAG bot to say "I don't know"
 
-[Email](mailto:dhruvpachori17@gmail.com) · [LinkedIn](https://linkedin.com/in/dhruv-pachori-a23671275)
+The failure mode that matters in retrieval isn't a wrong document — it's a **plausible** one. Cosine similarity always returns a top-k. Ask a documentation bot something the docs never covered and it still retrieves the five nearest chunks, hands them to the LLM, and the LLM dutifully writes a confident, fluent, invented answer.
+
+Pure semantic search made this worse in a specific way. Embeddings capture meaning but blur exact tokens — so a query naming a specific endpoint or error code would surface chunks that were *topically* about authentication without containing the identifier at all.
+
+Two changes, both in `rag/retriever.py` and `rag/llm.py`:
+
+**Hybrid retrieval.** Fuse dense semantic similarity with **BM25** keyword scoring. BM25 is unfashionable and very good at exactly what embeddings are weak at — literal identifiers, error codes, parameter names. Semantic search finds what you meant; BM25 finds what you typed. Fusing them recovers both.
+
+**A confidence floor.** Before generation, check the retrieved chunk scores. Below threshold, the bot doesn't generate — it says it doesn't know. Refusing is a feature: a support bot that invents an API parameter costs a developer an hour of debugging against documentation that was never real.
+
+Both are visible in the UI rather than hidden — a retrieval debug panel exposes per-chunk scores, and every answer carries source attribution back to the exact snippet used. If it's wrong, you can see *why* it was wrong.
+
+The same instinct shapes **VaidyaAI**: a medical triage agent has no business freelancing, so its answers are grounded in a FAISS index over WHO symptom guides and ICD-11 codes, with retrieval quality measured across a structured test set rather than eyeballed.
+
+[**See the implementation →**](https://github.com/dhruvWorkss/upwork-api-bot)
+
+---
+
+## 📊 GitHub Stats
+
+![Languages](https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=dhruvWorkss&theme=github_dark)
+
+---
+
+## 🌐 Connect
+
+- 💼 **LinkedIn:** https://linkedin.com/in/dhruv-pachori-a23671275
+- 📧 **Email:** dhruvpachori17@gmail.com
+
+---
+
+> I build systems that admit what they don't know. In medicine and in developer tooling, a confident wrong answer costs more than no answer.
